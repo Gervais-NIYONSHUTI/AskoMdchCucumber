@@ -114,7 +114,7 @@ public class StorePage extends BasePage {
     public void filterByCategory(String categoryName) {
         Select category = new Select(categorySelect);
         categorySelect.sendKeys(Keys.ENTER);
-        category.selectByVisibleText(categoryName);
+        category.selectByContainsVisibleText(categoryName);
         wait.withTimeout(Duration.ofSeconds(3));
     }
 

@@ -5,7 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
-public class CheckoutPage extends BasePage {
+public class
+CheckoutPage extends BasePage {
     @FindBy(id = "billing_first_name")
     private WebElement billingFirstnameFld;
     @FindBy(id = "billing_last_name")

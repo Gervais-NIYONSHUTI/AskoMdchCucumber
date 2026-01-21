@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 public class CartPage extends BasePage{
     @FindBy(css = "td[class=\"product-name\"]") private WebElement productNameField;
     @FindBy(css = "input[type='number']") private WebElement productQuantityField;
-    @FindBy(className = "checkout-button") private WebElement checkoutBtn;
+    @FindBy(css = ".checkout-button") private WebElement checkoutBtn;
 
     public CartPage(WebDriver driver) {
         super(driver);

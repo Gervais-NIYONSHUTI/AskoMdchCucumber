@@ -88,6 +88,7 @@ public class StoreStepDefinitions {
         List<Map<String, String>> categories = dataTable.asMaps(String.class, String.class);
         for (Map<String, String> row : categories) {
             String categoryName = row.get("category");
+            System.out.println(categoryName);
             storePage.filterByCategory(categoryName);
             filterCategoryResult = storePage.isCategoryFiltered(categoryName);
             filterCategoryMessage = "Should see only " + categoryName + " products";
