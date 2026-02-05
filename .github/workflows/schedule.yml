@@ -1,9 +1,8 @@
-name: build at 12:15 pm
+name: build at 12:35 pm
 
 on:
-  push:
   schedule:
-    - cron: 20 12 * * *
+    - cron: 35 12 * * *
 jobs:
   nightly-build:
     runs-on: ubuntu-latest
