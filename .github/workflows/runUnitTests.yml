@@ -9,6 +9,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.3.0
       - name: run unit tests
-        run: mvn tests
+        run: mvn test
     
   
