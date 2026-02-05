@@ -1,0 +1,25 @@
+name: build at 12:15 pm
+
+on:
+  push:
+  schedule:
+    - cron: 20 12 * * *
+jobs:
+  nightly-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.2
+
+      - name: run with Tests
+        run: mvn test
+
+      - name: run with Maven
+        run: mvn -DskipTests -B package --no-transfer-progress --file ./pom.xml
+
+      - uses: action/upload-artifact@master
+        with:
+          name: digibank.war
+          path: ./target/*digitalbank*.war
+          
+    
